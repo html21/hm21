@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm21 : CSS3 advanced</title>
+    <style>
+      div {
+        position: absolute;
+      }
+      img {
+        position: absolute;
+      }
+      div#start:hover {
+        transform: scale(0, 1);
+      }
+      #star {
+        z-index: 3;
+        left: 242px;
+        top: 90px;
+      }
+      #tree {
+        z-index: 1;
+        left: 65px;
+        top: 100px;
+      }
+      div > p {
+        z-index: 2;
+        display: inline-block;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background: greenyellow;
+        color: red;
+      }
+      div#christmas p:hover {
+        background: pink;
+      }
+      @keyframes textColorAnimation {
+        0% {
+          color: blue;
+        }
+        30% {
+          color: red;
+        }
+        100% {
+          color: darkmagenta;
+        }
+      }
+      span {
+        animation-name: textColorAnimation;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+      #frame {
+        z-index: -5;
+        left: 8px;
+        top: 60px;
+      }
+      div#decoration:hover {
+        z-index: 7;
+        transform: translateY(100px);
+      }
+
+      #deco1 {
+        z-index: 7;
+        left: 270px;
+        top: 150px;
+      }
+      #deco2 {
+        z-index: 7;
+        left: 170px;
+        top: 230px;
+      }
+      #deco3 {
+        z-index: 7;
+        left: 340px;
+        top: 330px;
+      }
+      #hm21 {
+        z-index: 3;
+        position: hm21;
+        top: 530px;
+        left: 210px;
+        width: 100px;
+        padding: 5px;
+        background: yellow;
+        color: black;
+      }
+      #BGM {
+        position: relative;
+        top: 5px;
+        left: 10px;
+      }
+    </style>
+    <script></script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>Merry Christmas!</h3>
+    <hr />
+    <div id="christmas">
+      <img
+        id="tree"
+        src="media/트리.webp"
+        width="400"
+        height="400"
+        art="크리스마스 트리"
+      />
+      <p style="left: 215px; top: 165px;">
+        <span><b>M</b></span>
+      </p>
+      <p style="left: 245px; top: 198px;">
+        <span><b>E</b></span>
+      </p>
+      <p style="left: 290px; top: 220px;">
+        <span><b>R</b></span>
+      </p>
+      <p style="left: 325px; top: 255px;">
+        <span><b>R</b></span>
+      </p>
+      <p style="left: 265px; top: 280px;">
+        <span><b>Y</b></span>
+      </p>
+      <p style="left: 210px; top: 298px;">
+        <span><b>-</b></span>
+      </p>
+      <p style="left: 155px; top: 320px;">
+        <span><b>X</b></span>
+      </p>
+      <p style="left: 225px; top: 350px;">
+        <span><b>M</b></span>
+      </p>
+      <p style="left: 310px; top: 375px;">
+        <span><b>A</b></span>
+      </p>
+      <p style="left: 390px; top: 390px;">
+        <span><b>S</b></span>
+      </p>
+
+      <img
+        id="frame"
+        src="media/554.jpg"
+        width="550"
+        height="450"
+        art="테두리 장식"
+      />
+    </div>
+    <div id="start">
+      <img id="star" src="media/star4.png" width="50" height="50" />
+    </div>
+    <div id="decoration">
+      <img id="deco1" src="media/장식1.png" width="50" height="50" />
+      <img id="deco2" src="media/장식2.png" width="50" height="50" />
+      <img id="deco3" src="media/장식3.png" width="30" height="30" />
+    </div>
+    <div id="hm21">
+      hm21, 경명아
+    </div>
+    <div id="BGM">
+      <audio
+        src="media/Ariana Grande-1-Last Christmas.mp3"
+        controls
+        autoplay
+        loop
+      ></audio>
+    </div>
+  </body>
+</html>
