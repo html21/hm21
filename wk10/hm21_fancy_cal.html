@@ -5,7 +5,68 @@
     <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
     <meta charset="utf-8" />
     <title>hm21 : Javascript</title>
-    <style></style>
+    <style>
+        body {
+        background-color: rgb(65, 200, 241);
+      }
+      div.box {
+        background-color: rgb(168, 252, 248);
+        background-position: center;
+        background-image: url("media/프레임.png");
+        border-bottom: rgb(133, 37, 37) 5px solid;
+        border-right: rgb(133, 37, 37) 5px solid;
+        border-radius: 20px;
+        position: absolute;
+        left: 20%;
+        height: 400px;
+        width: 500px;
+      }
+      h3 {
+        color: rgb(133, 37, 37);
+      }
+      input.op {
+        text-align: center;
+        font-size: 15px;
+        background-color: #facce8;
+      }
+      input.num {
+        text-align: center;
+        font-size: 15px;
+        background-color: #cdc1f8;
+      }
+      input {
+        text-align: center;
+        border: none;
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        border-radius: 10px;
+        border-bottom: black 1px solid;
+        border-right: black 1px solid;
+      }
+      input:hover {
+        background-color: #51c9f8;
+      }
+      input#display {
+        text-align: center;
+        width: 310px;
+        font-size: 15px;
+        background-color: #c6dfb2;
+      }
+      input#display:hover {
+        background-color: #a9ada3;
+      }
+      input#button {
+        text-align: center;
+        width: 100px;
+        font-size: 15px;
+        background-color: #c6dfb2;
+      }
+      input#button:hover {
+        background-color: #62c6ff;
+      }
+
+    </style>
     <script>
       var expression = "";
 
@@ -43,49 +104,118 @@
 
   <body>
     <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <div class="box">
     <div align="center">
-      <h3>JS calculator</h3>
+      <h3>hm21 계산기</h3>
       <hr />
       <form>
         <input id="display" value="0" size="21" />
-        <input type="button" value="    &larr;    " onclick="del()" />
-        <br />
-        <input class="num" type="button" value="    7    " onclick="add('7')" />
-        <input class="num" type="button" value="    8    " onclick="add('8')" />
-        <input type="button" value="    9    " onclick="add('9')" />
-        <input class="op" type="button" value="    /    " onclick="add('/')" />
-        <br />
-        <input type="button" value="    4    " onclick="add('4')" />
-        <input type="button" value="    5    " onclick="add('5')" />
-        <input type="button" value="    6    " onclick="add('6')" />
-        <input type="button" value="    *    " onclick="add('*')" />
-        <br />
-        <input type="button" value="    1    " onclick="add('1')" />
-        <input type="button" value="    2    " onclick="add('2')" />
-        <input type="button" value="    3    " onclick="add('3')" />
-        <input type="button" value="    -    " onclick="add('-')" />
+        <input id="button" type="button" value="    &larr;    " onclick="del()" />
         <br />
         <input
+        type="button"
+        value="Clear"
+        onclick="clearDisplay()"
+      />
+      <input class="op" type="button" value="%" onclick="add('%')" />
+      <input
+      class="num"
+      type="button"
+      value="    /    "
+      onclick="add('/')"
+    />
+    <input
+    class="num"
+    type="button"
+    value="    *    "
+    onclick="add('*')"
+  /><br />
+            <input
+              class="op"
+              type="button"
+              value="    7    "
+              onclick="add('7')"
+            />
+            <input
+              class="op"
+              type="button"
+              value="    8    "
+              onclick="add('8')"
+            />
+            <input
+              class="op"
+              type="button"
+              value="    9    "
+              onclick="add('9')"
+            />
+            <input class="num" type="button" value="    -    " onclick="add('-')" />
+        <br />
+            <input
+              class="op"
+              type="button"
+              value="    4    "
+              onclick="add('4')"
+            />
+            <input
+              class="op"
+              type="button"
+              value="    5    "
+              onclick="add('5')"
+            />
+            <input
+              class="op"
+              type="button"
+              value="    6    "
+              onclick="add('6')"
+            />
+            <input
+            class="num"
+            type="button"
+            value="    +    "
+            onclick="add('+')"
+          />
+
+        </tr>
+        <br />
+        <input class="op" type="button" value="    1    " onclick="add('1')" />
+        <input class="op" type="button" value="    2    " onclick="add('2')" />
+        <input class="op" type="button" value="    3    " onclick="add('3')" />
+        <input
+        class="num"
+        type="button"
+        value="    .    "
+        onclick="add('.')"
+      />
+        <br />
+        <tr>
+
+          <input
+            class="op"
+            type="button"
+            value="  0  "
+            onclick="add('0')"
+          />
+          <input
+          class="num"
           type="button"
-          value="            0            "
-          onclick="add('0')"
+          value="  00  "
+          onclick="add('00')"
         />
-        <input type="button" value="    .    " onclick="add('.')" />
-        <input type="button" value="    +    " onclick="add('+')" />
-        <br />
         <input
+        class="num"
+        type="button"
+        value="  000  "
+        onclick="add('000')"
+      />
+          <input
+          id="button"
           type="button"
-          value="       Clear          "
-          onclick="clearDisplay()"
-        />
-        <input
-          type="button"
-          value="       Enter          "
+          value="Enter"
           name="enter"
           onclick="compute()"
         />
       </form>
-      <h4>COMSI, HMxx</h4>
+      <h4>COMSI, HM21</h4>
     </div>
   </body>
 </html>
